@@ -4,8 +4,10 @@ const Schema = mongoose.Schema;
 
 //Define schema
 const userSchema = new Schema({
-	email: { type: String, unique: true, lowercase: true},
-	password: String
+	email: { type: String, unique: true, lowercase: true, required: true },
+	password: { type: String, required: true },
+	name: { type: String, required: true} ,
+	surname: { type: String, required: true }
 })
 
 //Create the model class

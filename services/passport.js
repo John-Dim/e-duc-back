@@ -25,10 +25,7 @@ const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
 		} else {
 			return done(null, user)
 		}
-
 	})
-
-
 })
 
 const jwtOptions = {
