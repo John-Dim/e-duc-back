@@ -8,7 +8,12 @@ const tokenForUser = (userId) => {
 }
 
 export const signup = (req, res, next) => {
-	const { name, surname, speciality, scientificField, scientificInstitution, email, password } = req.body;
+	const { name, 
+					surname, 
+					speciality, 
+					field, 
+					institution, email, 
+					password } = req.body;
 
 	if (!email || !password) {
 		return res.status(422).send({error: 'You must provide email and password'})
@@ -25,8 +30,8 @@ export const signup = (req, res, next) => {
 			{ name, 
 				surname, 
 				speciality, 
-				scientificField, 
-				scientificInstitution, 
+				field, 
+				institution, 
 				email, 
 				password
 			});

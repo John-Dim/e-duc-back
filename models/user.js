@@ -8,14 +8,14 @@ const userSchema = new Schema({
 	password: { type: String, required: true },
 	name: { type: String, required: true} ,
 	surname: { type: String, required: true },
+	speciality: String,
+	institution: String,
+	field: String,
 	phone: String,
 	quote: String,
 	bio: String,
-	speciality: String,
-	scientificInstitution: String,
-	school: String,
-	jobTitle: String,
-	skills: String
+	age: Number,
+	livesAt: String
 })
 
 //Create the model class
