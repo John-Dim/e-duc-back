@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //Define schema
 const postSchema = new Schema({
-  body: { type: String, unique: true, lowercase: true, required: true },
+  body: { type: String, required: true },
   creator: { type: Schema.Types.ObjectId, ref: 'User' },
   createdAt: { type: Date, required: true, default: Date.now }
 })

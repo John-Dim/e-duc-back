@@ -1,5 +1,6 @@
 import { signup, signin }  from './controllers/authentication';
 import { me, getUser, updateUser } from './controllers/users'
+import { createGroup, getGroup, updateGroup, getGroups} from './controllers/groups';
 import { createPost, getUserPosts } from './controllers/posts';
 
 import passportService from './services/passport';
@@ -16,6 +17,11 @@ const router = (app) => {
 	app.get('/users/:id', requireAuth, getUser);
 	app.put('/users/:id', requireAuth, updateUser);
 	app.get('/users/:id/posts', requireAuth, getUserPosts);
+
+	app.post('/groups', requireAuth, createGroup);
+	app.get('/groups/:id', requireAuth, getGroup);
+	app.put('/groups/:id', requireAuth, updateGroup);
+	app.get('/groups', requireAuth, getGroups);
 
 	app.post('/posts', requireAuth, createPost);
 
