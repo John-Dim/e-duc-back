@@ -15,7 +15,8 @@ const userSchema = new Schema({
   quote: String,
   bio: String,
   age: Number,
-  livesAt: String
+  livesAt: String,
+  followingGroups: [{ type: Schema.Types.ObjectId, ref: 'Group' }],
 })
 
 //Create the model class

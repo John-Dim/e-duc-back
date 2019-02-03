@@ -8,7 +8,7 @@ export const createGroup = (req, res, next) => {
 
   group.save((error) => {
     if (error) { return next(error); }
-
+ 
     res.json(group);
   })
 }

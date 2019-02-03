@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema({
   body: { type: String, required: true },
   creator: { type: Schema.Types.ObjectId, ref: 'User' },
-  createdAt: { type: Date, required: true, default: Date.now }
+  createdAt: { type: Date, required: true, default: Date.now },
+  profilePost: Boolean
 })
 
 //Create the model class
